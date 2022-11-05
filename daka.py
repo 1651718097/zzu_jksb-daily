@@ -111,7 +111,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
         else:
             break
     text = r.text.encode(r.encoding).decode(r.apparent_encoding)  # 解决乱码问题
-    print(text) # 本人填报按钮页
+    # print(text) # 本人填报按钮页
 
     # 获取fun18参数
     matchObj_fun18 = re.findall(r'name="fun18" value="(\d+)"', text)
@@ -199,7 +199,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
             break
     text = r.text.encode(r.encoding).decode(r.apparent_encoding)  # 解决乱码问题
     # 打印出最后成功的页面  处理一下【你今日的健康状态上报信息已通过审核，今日不能再修改】这个问题  其实也不用解决，因为会返回今日您已经填报过了！
-    print(text)
+    # print(text)
 
     r.close()
     del (r)
@@ -223,7 +223,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
         else:
             break
     text = r.text.encode(r.encoding).decode(r.apparent_encoding)  # 解决乱码问题
-    print(text)
+    # print(text)
 
     # # 获取fun18参数
     # matchObj_fun18 = re.findall(r'name="fun18" value="(\d+)"', text)
