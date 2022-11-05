@@ -20,6 +20,7 @@ pwd = os.environ["pwd"]
 
 if __name__ == '__main__':
     # 打卡
-    msg = daka.sign_in(id=id, pwd=pwd, name=str(id), check_today=0)
+    msg = daka.sign_in(id=id, pwd=pwd)
     # 发送邮件
     #utils.mail(msg, MAIL_TO, MAIL_USER=MAIL_USER, MAIL_PWD=MAIL_PWD)
+    print(msg)
