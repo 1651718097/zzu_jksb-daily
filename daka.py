@@ -228,7 +228,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
     # # 获取fun18参数
     # matchObj_fun18 = re.findall(r'name="fun18" value="(\d+)"', text)
     # fun18 = matchObj_fun18[0]
-     print(f"1:{fun18}")
+    # print(f"1:{fun18}")
 
     tree = etree.HTML(text)
     nodes = tree.xpath('//*[@id="bak_0"]/div[5]/span')
