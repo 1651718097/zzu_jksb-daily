@@ -101,7 +101,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
         try:
             r = s.get(
                 "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?ptopid=" + ptopid + "&sid=" + sid + "&fun2=",
-                headers=headers, verify=False)  # response里含有jksb对应的params
+                headers=headers)  # response里含有jksb对应的params
         except:
             logging.error("get请求失败")
             if curr_punch > max_punch:
