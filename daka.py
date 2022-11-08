@@ -64,7 +64,7 @@ def sign_in(id, pwd, name="Turing", check_today=1):
             s.mount('https://', adapter)
             # post请求记得关闭证书错误忽略 verify=False 这里原来是 requests.post
             r = s.post("https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/login", headers=headers, data=form,
-                              timeout=(200, 200), verify=False)  # response为账号密码对应的ptopid和sid信息,timeout=60(sec)
+                              timeout=(200, 200))  # response为账号密码对应的ptopid和sid信息,timeout=60(sec)
             logging.info("成功运行post请求")
         except Exception as e:
             logging.error("请检查网络链接是否正常")
