@@ -202,7 +202,6 @@ def sign_in(id, pwd, name="Turing", check_today=1):
     # print(text)
 
     r.close()
-    del (r)
 
     headers = {
         'User-Agent': const.Const.USER_AGENT.value,
